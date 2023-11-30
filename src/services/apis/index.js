@@ -12,8 +12,7 @@ export const URIS = {
 };
 
 let api = create({
-  // baseURL: "https://busy-erin-viper-vest.cyclic.app",
-  baseURL: "http://localhost:8080",
+  baseURL: "https://busy-erin-viper-vest.cyclic.app",
   headers: {
     Accept: "application/json",
     "Cache-Control": "no-cache",
