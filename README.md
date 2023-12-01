@@ -59,5 +59,6 @@ Follow these comprehensive steps to start using Lama for your project management
 ![displayConfig](https://github.com/Milan677/unique-stretch-3372/assets/112807213/45e97d80-5632-406f-b24a-47dcc92db83a)
 ![imageUpload](https://github.com/Milan677/unique-stretch-3372/assets/112807213/0f114513-e715-472f-be48-b73fcc75b0df)
 ![profile](https://github.com/Milan677/unique-stretch-3372/assets/112807213/80b76220-d19c-4822-82b9-8e3f31520f69)
+![Page Not Found](https://github.com/lokendra0905/lama-backend/assets/112807213/585f00b0-6081-4f86-bde9-99f50d9e8956)
 
 
