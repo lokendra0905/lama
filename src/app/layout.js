@@ -14,14 +14,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
         />
       </head>
       <body className={inter.className}>
-        <Box bg={"white"} width={'100%'}>
+        <Box bg={"white"} width={"100%"}>
           <ChakraProvider>{children}</ChakraProvider>
         </Box>
       </body>

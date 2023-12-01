@@ -150,6 +150,8 @@ export const Sidebar = ({ children, projectId }) => {
   const SidebarLinks = [
     { name: "Projects", route: `/upload/${projectId}` },
     { name: "Widget Configurations", route: `/upload/${projectId}/widget-configuration` },
+    { name: "Deployment", route: "#" },
+    { name: "Pricing", route: "#" },
   ];
 
   return (

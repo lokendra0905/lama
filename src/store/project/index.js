@@ -9,6 +9,7 @@ export const useProjectStore = create((set, get) => ({
     set({
       getProjectStatus: STATUS.NOT_STARTED,
       addProjectStatus: STATUS.NOT_STARTED,
+      updateProjectStatus: STATUS.NOT_STARTED,
     });
   },
 
@@ -41,38 +42,20 @@ export const useProjectStore = create((set, get) => ({
     }
   },
 
-  //   updateStaffAction: async (payload) => {
-  //     set({ updateStaffStatus: STATUS.FETCHING });
-  //     const { data, ok } = await apis.updateStaffApi(payload);
-  //     let previousData = get().projectData || [];
-  //     if (ok) {
-  //       const updatedData =
-  //         previousData && map(previousData, (d) => (data._id === d?._id ? data : d));
-  //       set({
-  //         updateStaffStatus: STATUS.SUCCESS,
-  //         projectData: { ...previousData, docs: updatedData },
-  //       });
-  //       SuccessAlert((data && data.errorMessage) || "Staff Updated Successfully");
-  //     } else {
-  //       set({ updateStaffStatus: STATUS.FAILED });
-  //       ErrorAlert((data && data.errorMessage) || "Something went Wrong");
-  //     }
-  //   },
-
-  //   deleteStaffAction: async (payload) => {
-  //     set({ deleteStaffStatus: STATUS.FETCHING });
-  //     const { data, ok } = await apis.deleteStaffApi(payload);
-  //     let previousData = get().projectData;
-  //     if (ok) {
-  //       const newData = previousData && filter(previousData?.docs, (d) => d._id !== payload.id);
-  //       set({
-  //         deleteStaffStatus: STATUS.SUCCESS,
-  //         projectData: { ...previousData, docs: newData },
-  //       });
-  //       SuccessAlert((data && data.errorMessage) || "Staff Deleted Successfully");
-  //     } else {
-  //       set({ deleteStaffStatus: STATUS.FAILED });
-  //       ErrorAlert(data && data.errorMessage);
-  //     }
-  //   },
+  updateProjectAction: async (payload) => {
+    set({ updateProjectStatus: STATUS.FETCHING });
+    const { data, ok } = await apis.updateProjectApi(payload);
+    let previousData = get().projectData || [];
+    if (ok) {
+      const newData = map(previousData, (d) => (d._id == data?._id ? data : d));
+      set({
+        projectData: newData,
+        updateProjectStatus: STATUS.SUCCESS,
+      });
+      SuccessAlert("Updated Successfully");
+    } else {
+      set({ updateProjectStatus: STATUS.FAILED });
+      ErrorAlert((data && data.errorMessage) || "Something Went Wrong");
+    }
+  },
 }));

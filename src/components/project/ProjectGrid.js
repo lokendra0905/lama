@@ -29,8 +29,6 @@ export const ProjectGrid = ({ projects, handleModal }) => {
 
       <SimpleGrid columns={3} mt={10} gap={10}>
         {map(projects, (project) => {
-          console.log(project);
-
           return (
             <Card
               variant={"outline"}

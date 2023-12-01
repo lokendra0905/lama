@@ -40,10 +40,10 @@ export const WidgetConfiguration = ({ id }) => {
 
               <TabPanels>
                 <TabPanel>
-                  <GeneralTab />
+                  <GeneralTab project={Project} />
                 </TabPanel>
                 <TabPanel>
-                  <DisplayTab />
+                  <DisplayTab project={Project} />
                 </TabPanel>
               </TabPanels>
             </Tabs>
