@@ -15,9 +15,8 @@ Follow these comprehensive steps to start using Lama for your project management
 
 1. _Clone the Repository_: Clone the Lama repository to your local machine.
 2. _Install Dependencies_: Run npm install to install all necessary dependencies.
-3. _Set up MongoDB_: Configure and set up the MongoDB database to store project data.
-4. _Run the Server_: Start the server using npm start.
-5. _Access the Application_: Open your browser and visit http://localhost:3000 to access the Lama application.
+3. _Run the Server_: Start the server using npm run dev.
+4. _Access the Application_: Open your browser and visit http://localhost:3000 to access the Lama application.
 
 ## Features
 
